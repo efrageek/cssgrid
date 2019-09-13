@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Funciones</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* 
+        
+         */
+        .container {
+            display: grid;
+            /* grid-template-columns: 25% 50% 25%; */
+            /* grid-template-rows: 300px 300px; */
+            /* grid-template: rows / columns; */
+            grid-template: 100px 1fr 150px / 200px 1fr;
+            /* grid-column-gap: 30px; New: column-gap
+            grid-row-gap: 50px; New: row-gap */ 
+            grid-gap: 5px;
+            height: 100vh;
+
+            grid-template-areas: "header header" 
+                                 "left contenido"
+                                 "footer footer"
+        }
+
+        .item {
+            padding: 10px;
+            border-radius: 5px;
+            /* margin-right: 10px;
+            margin-bottom: 10px; */ 
+
+        }
+
+        .header {
+            color: white;
+            background-color: #3c70a4;
+            grid-area: header;
+        }
+        .left {
+            color: white;
+            background-color: #64b2cd;
+            grid-area: left; 
+        }
+
+        .contenido {
+            color: white;
+            background-color: #d9eeec;
+            grid-area: contenido;
+        }
+
+        .footer {
+            color: white;
+            background-color: #3c70a4;
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="item header">header</div>
+        <div class="item left">left panel</div>
+        <div class="item contenido">contenido </div>
+        <div class="item footer">footer</div>
+    </section>
+</body>
+</html>
