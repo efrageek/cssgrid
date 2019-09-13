@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tamano de items usando lineas de golumnas y de filas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* 
+        
+         */
+        .container {
+            display: grid;
+            /* grid-template: rows / columns; */
+            grid-template: 2fr repeat(2, 1fr) / repeat(7, 1fr);
+            height: 100vh;
+            grid-gap: 3px;
+
+            
+        }
+
+
+
+        .item {
+            /* border: 1px solid red; */
+            padding: 10px;
+            color: white;
+            background-color: #3c70a4;
+
+        }
+
+        .main {
+            grid-column: 1 / -1;
+        }
+
+        .item:nth-of-type(2) {
+            /* grid-column-start: 1;
+            grid-column-end: 3; */
+            grid-column: 1 / span 3;
+            grid-row: 2 / -1;
+        }
+
+        .item:nth-of-type(3) {
+            grid-column: 4 / span 2;
+            grid-row: 2 / -1;
+        }
+
+        .item:nth-of-type(4) {
+            /* grid-column: start / end */
+            grid-column: 6 / -1; 
+        }
+
+        .item:nth-of-type(7) {
+            /* grid-column: start / end */
+            /* grid-column: 2 / span 2; */
+        }
+        .item:nth-of-type(6) {
+            /* grid-column: start / end */
+            /* grid-row: 3 / 5; */
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="item main">main</div>
+        <div class="item">item #1</div>
+        <div class="item">item #2</div>
+        <div class="item">item #3</div>
+        <div class="item">item #4</div>
+        <div class="item">item #5</div>
+    </section>
+</body>
+</html>
